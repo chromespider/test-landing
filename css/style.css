@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #F4B800;
+    --color-secondary: #F7fff6;
+    --color-text-primary: #1e1e24;
+    --color-text-secondary: #F7fff6;
+    --color-emphasis: #fa4a4a;
+    --gradient-primary: #fa4a4a;
+    --gradient-secondary: #303fe4;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.promo {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.background {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+
+/* Removing Opera video popup button for background video */
+#detach-button-host {
+    display: none !important;
+}
+
+.title {
+    font-size: 3rem;
+    padding: .3em .6em;
+    border-radius: .3em;
+    color: var(--color-text-primary);
+    background-color: var(--color-primary);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 94vw;
+    font-size: .88rem;
+    font-weight: bold;
+}
+
+.props {
+    background-color: var(--color-secondary);
+    list-style-type: square;
+    border-radius: .6em;
+    padding: .8em .8em .8em 1.8em;
+    color: var(--color-text-primary);
+}
+
+.productimg {
+    height: 16em;
+}
+
+.orderbutton {
+    background-color: var(--color-primary);
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-text-primary);
+}
+
+.orderbutton:hover {
+    color: var(--color-text-secondary);
+}
+
+.composition {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+
+    background: linear-gradient(270deg, var(--gradient-primary), var(--gradient-secondary));
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+
+.gridwrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.composition .productimg {
+    height: 8em;
+}
+
+.ingredient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .75rem;
+    color: var(--color-text-secondary);
+}
+
+.ingredientimg {
+    border-radius: 2.5em;
+    height: 4.5em;
+}
+
+.reviews {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(270deg, var(--gradient-secondary), var(--gradient-primary));
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+
+.personimg {
+    border-radius: .4em;
+    height: 8em;
+}
+
+.swiper {
+    width: 90vw;
+    background-color: var(--color-text-secondary);
+    border-radius: 1em;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-slide {
+    display: flex;
+    padding: 3em;
+    gap: 1em;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.promo_bottom {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(270deg, var(--gradient-primary), var(--gradient-secondary));
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+
+.promo_bottom .hero {
+    width: 80vw;
+    font-size: .8rem;
+    text-align: justify;
+    color:  var(--color-text-secondary);
+}
+
+.doctorimg {
+    height: 15em;
+}
+
+.props_bottom {
+    font-size: .75rem;
+    width: 96vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-text-secondary);
+    background-color: var(--color-primary);
+    border-radius: 1em;
+}
+
+.order {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: linear-gradient(270deg, var(--gradient-secondary), var(--gradient-primary));
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+
+.timer {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-emphasis);
+    background-color: var(--color-secondary);
+    border-radius: .4em;
+    padding: .4em .8em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.productbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}
+
+.orderform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1em;
+    border-radius: .4em;
+    gap: 1em;
+    background-color: var(--color-secondary);
+}
+
+/* Chrome, Safari, Edge, Opera number wheel hiding */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox number wheel hiding */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+    height: 2em;
+    max-width: 60vw;
+    border: none;
+    background-color: var(--color-secondary);
+}
+
+input:focus {
+    outline: none;
+}
+
+.namehint, .numberhint {
+    visibility: hidden;
+    /* height: .3em; */
+    align-self: flex-end;
+    font-weight: normal;
+    font-size: .6rem;
+}
+
+.name, .number {
+    width: 70vw;
+    border-bottom: 1px solid #ccc;
+}
+
+.submit {
+    background-color: var(--color-primary);
+    border-radius: .3em;
+    width: 8em;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.order .productimg {
+    height: 12em;
+}
+
+.oldprice {
+    text-decoration-line: line-through;
+}
+
+.newprice {
+    color: var(--color-text-secondary);
+    font-size: 1.6rem;
+    animation: tilting 3s ease infinite;
+}
+
+@keyframes gradient {
+    0%, 100%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+}
+
+@keyframes tilting {
+    0%, 100% {transform: rotate(0deg);}
+    33% {transform: rotate(5deg);}
+    66% {transform: rotate(-5deg);}
+}
+
+@media only screen and (min-width: 360px) {
+    .description {
+        font-size: 1rem;
+    }
+    .props_bottom {
+        width: 26em;
+    }
+    .namehint, .numberhint {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .composition {
+        gap: 2em;
+    }
+    .composition .productimg {
+        height: 10em;
+    }
+    .gridwrapper {
+        column-gap: 6em;
+    }
+    .ingredient {
+        font-size: 1rem;
+        gap: 1em;
+    }
+    .ingredientimg {
+        height: 6em;
+        border-radius: 4em;
+    }
+    .doctorimg {
+        height: 20em;
+    }
+    .orderform {
+        max-width: 20em;
+    }
+    .name, .number {
+        max-width: 20em;
+    }
+    .description {
+        font-size: 1.2rem;
+    }
+    .hero .namehint, .hero .numberhint {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .props {
+        font-size: 1.6rem;
+    }
+    .gridwrapper {
+        max-width: 60em;
+    }
+    .composition .productimg {
+        height: 12em;
+    }
+    .ingredient {
+        font-size: 1.2rem;
+        gap: .2em;
+    }
+    .ingredientimg {
+        height: 6em;
+        border-radius: 4em;
+    }
+    .swiper {
+        max-width: 40em;
+        font-size: 1.2rem;
+    }
+    .doctorimg {
+        height: 22em;
+    }
+    .hero {
+        max-width: 70em;
+    }
+    .productbox .productimg {
+        height: 18em;
+    }
+}
